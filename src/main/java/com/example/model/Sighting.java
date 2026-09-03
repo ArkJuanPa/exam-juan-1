@@ -3,8 +3,8 @@ package com.example.model;
 public class Sighting {
     private int id;
     private String sightingCode;
-    private String Name;
-    private String Description;
+    private String name;
+    private String description;
     private String scientificName;
     private String sightedAt;
     private String location;
@@ -12,11 +12,12 @@ public class Sighting {
     private int confidenceLevel;
     private int expeditionId;
 
-    public Sighting(int id, String sightingCode, String description, String name, String scientificName, String sightedAt, String location, int quantity, int confidenceLevel, int expeditionId) {
+    public Sighting(int id, String sightingCode, String description, String name, String scientificName,
+            String sightedAt, String location, int quantity, int confidenceLevel, int expeditionId) {
         this.id = id;
         this.sightingCode = sightingCode;
-        Description = description;
-        Name = name;
+        this.description = description;
+        this.name = name;
         this.scientificName = scientificName;
         this.sightedAt = sightedAt;
         this.location = location;
@@ -42,19 +43,19 @@ public class Sighting {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getScientificName() {
@@ -110,8 +111,8 @@ public class Sighting {
         return "Sighting{" +
                 "id=" + id +
                 ", sightingCode='" + sightingCode + '\'' +
-                ", Name='" + Name + '\'' +
-                ", Description='" + Description + '\'' +
+                ", Name='" + name + '\'' +
+                ", Description='" + description + '\'' +
                 ", scientificName='" + scientificName + '\'' +
                 ", sightedAt='" + sightedAt + '\'' +
                 ", location='" + location + '\'' +

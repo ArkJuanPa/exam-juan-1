@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Expedition Management</title>
+</head>
+<body>
+<h1>Expedition Management</h1>
+<h2>Register Expedition</h2>
+<form action="expeditions" method="POST">
+    <input
+            name="id"
+            type="number"
+            placeholder="Expedition Identifier">
+    <input
+            name="name"
+            type="text"
+            placeholder="Expedition Name">
+    <input
+            name="code" minlength="6" maxlength="6"
+            type="text"
+            placeholder="Expedition Code">
+
+    <select name="region">
+        <option value="AMAZONIA">Amazonia</option>
+        <option value="SIERRA NEVADA">Sierra Nevada</option>
+        <option value="COSTA PACIFICA">Costa Pacifica</option>
+        <option value="OTHER">Other</option>
+    </select>
+    <input
+            name="baseCamp"
+            type="text"
+            placeholder="Expedition Base Camp">
+    <input
+            name="leader"
+            type="text"
+            placeholder="Expedition Leader">
+    <input
+            name="startDate"
+            type="text"
+            placeholder="Start Date(YYYY-MM-DD)">   
+            
+    <input
+            name="endDate"
+            type="text"
+            placeholder="End Date(YYYY-MM-DD)">
+
+    <select name="estate">
+        <option value="ACTIVE">Active</option>
+        <option value="COMPLETED">Completed</option>
+        <option value="CANCELLED">Cancelled</option>
+        <option value="OTHER">Other</option>
+    </select>
+
+    <button>Send</button>
+</form>
+
+<h2>Delete Expedition</h2>
+<form action="expeditions?action=delete" method="POST">
+    <input
+            name="id"
+            type="number"
+            placeholder="Expedition Identifier"
+            required>
+    <button type="submit">Delete Expedition</button>
+</form>
+
+<h2>Register Sighting</h2>
+<form action="sightings" method="POST">
+    <input
+            name="id"
+            type="number"
+            placeholder="Sighting Identifier">
+    <input
+            name="sightingCode"
+            type="text"
+            placeholder="Sighting Code">
+    <input
+            name="name"
+            type="text"
+            placeholder="Sighting Name">
+
+    <input
+            name="description"
+            type="text"
+            placeholder="Sighting Description">
+
+    <input
+            name="scientificName"
+            type="text"
+            placeholder="Scientific Name">
+
+    <input
+            name="sightedAt"
+            type="text"
+            placeholder="Sighted At">
+
+    <input
+            name="location"
+            type="text"
+            placeholder="Location">
+
+    <input
+            name="quantity"  min="0"
+            type="number"
+            placeholder="Quantity">
+    <input
+            name="confidenceLevel"  min="0"
+            type="number"
+            placeholder="Confidence Level">
+
+    <input
+            name="ExpeditionId"
+            type="number"
+            placeholder="Expedition Identifier">
+
+    <button>Send</button>
+
+</form>
+</body>
+</html>
