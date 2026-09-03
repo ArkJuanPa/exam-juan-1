@@ -20,14 +20,14 @@
             type="text"
             placeholder="Expedition Name">
     <input
-            name="code" minlength="6" maxlength="6"
+            name="code" minlength="5" maxlength="20"
             type="text"
             placeholder="Expedition Code">
 
     <select name="region">
         <option value="AMAZONIA">Amazonia</option>
-        <option value="SIERRA NEVADA">Sierra Nevada</option>
-        <option value="COSTA PACIFICA">Costa Pacifica</option>
+        <option value="SIERRA_NEVADA">Sierra Nevada</option>
+        <option value="COSTA_PACIFICA">Costa Pacifica</option>
         <option value="OTHER">Other</option>
     </select>
     <input
@@ -71,15 +71,15 @@
 <h2>Register Sighting</h2>
 <form action="sightings" method="POST">
     <input
-            name="id"
+            name="id" minlength="1"
             type="number"
             placeholder="Sighting Identifier">
     <input
-            name="sightingCode"
+            name="sightingCode" minlength="5" maxlength="20"
             type="text"
             placeholder="Sighting Code">
     <input
-            name="name"
+            name="name" minlength="1" 
             type="text"
             placeholder="Sighting Name">
 

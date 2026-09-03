@@ -9,7 +9,6 @@
     <bean id="expeditionRepository"
           class="com.example.repository.ExpeditionRepository"
           init-method="initialize"/>
-    </bean>
 
     <bean id="sightingRepository"
           class="com.example.repository.SightingRepository"
@@ -19,14 +18,14 @@
 
     <bean id="expeditionService"
           class="com.example.service.ExpeditionService">
-        <constructor-arg ref="ExpeditionRepository"/>
-        <constructor-arg ref="SightingRepository"/>
+        <constructor-arg ref="expeditionRepository"/>
+        <constructor-arg ref="sightingRepository"/>
     </bean>
 
     <bean id="sightingService"
-          class="com.example.service.GameSessionService">
-        <constructor-arg ref="ExpeditionRepository"/>
-        <constructor-arg ref="SightingRepository"/>
+          class="com.example.service.SightingService">
+        <constructor-arg ref="expeditionRepository"/>
+        <constructor-arg ref="sightingRepository"/>
     </bean>
 
 </beans>

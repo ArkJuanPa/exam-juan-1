@@ -24,7 +24,7 @@ public class SightingServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html; charset=UTF-8");
-        resp.getWriter().println("<h1>Game Sessions registered</h1>");
+        resp.getWriter().println("<h1>Sightings registered</h1>");
 
         resp.getWriter().println("<ul>");
         for (Sighting sighting : sightingService.getsightings()) {

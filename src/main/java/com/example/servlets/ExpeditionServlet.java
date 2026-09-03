@@ -23,7 +23,7 @@ public class ExpeditionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html; charset=UTF-8");
-        resp.getWriter().println("<h1>Game Sessions registered</h1>");
+        resp.getWriter().println("<h1>Expeditions registered</h1>");
 
         resp.getWriter().println("<ul>");
         for (Expedition expedition : expeditionService.getExpeditions()) {

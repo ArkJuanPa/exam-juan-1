@@ -20,14 +20,6 @@ public class SightingRepository {
         return sightings;
     }
 
-    public boolean existsById(int id) {
-        for (Sighting Sighting : sightings) {
-            if (Sighting.getId() == id) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     public Sighting searchById(int id) {
         for (Sighting Sighting : sightings) {
@@ -58,5 +50,7 @@ public class SightingRepository {
 
     public void initialize() {
         save(new Sighting(1, "775-225", "Its good", "Tucan", " Ramphastidae ", "Tree", "Amazonas", 2, 2, 1));
+        save(new Sighting(2, "652-1563", "Its bad", "Crocodile", "Crocodylidae", "Lake", "SIERRA_NEVADA", 3, 7, 2));
+
     }
 }

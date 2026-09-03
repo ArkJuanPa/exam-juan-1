@@ -21,10 +21,10 @@ public class ExpeditionService {
     public boolean addExpedition(Expedition expedition) {
         if (expedition == null
                 || expedition.getCode() == null
+                || expedition.getName() == null
                 || expeditionRepository.existById(expedition.getId()) ||
                 expeditionRepository.existByCode(expedition.getCode()) ||
-                expedition.getCode().length() != 6 ||
-                !"AVAILABLE".equalsIgnoreCase(expedition.getState())) {
+                expedition.getCode().length() > 5 && expedition.getCode().length() < 20) {
             return false;
 
         }

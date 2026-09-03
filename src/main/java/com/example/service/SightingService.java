@@ -19,6 +19,8 @@ public class SightingService {
     public boolean addsighting(Sighting sighting) {
         if (sighting == null
                 || sighting.getSightingCode() == null
+                || sighting.getName() == null
+                || sighting.getSightingCode().length() > 5 && sighting.getSightingCode().length() < 20
                 || expeditionRepository.existById(sighting.getId())
                 || expeditionRepository.existByCode(sighting.getSightingCode())) {
             return false;
