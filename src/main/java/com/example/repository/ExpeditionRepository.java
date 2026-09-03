@@ -45,4 +45,13 @@ public class ExpeditionRepository {
         return false;
     }
 
+    public void initialize() {
+        save(new Expedition(1, "Amazon", "VG0001", "AMAZONIA", "First", "Juan Martinez", "2022-10-12", "2022-12-10",
+                "ACTIVE"));
+        save(new Expedition(2, "Amazon", "VG0001", "AMAZONIA", "First", "Juan Martinez", "2022-10-12", "2022-12-10",
+                "ACTIVE"));
+        save(new Expedition(3, "Amazon", "VG0001", "AMAZONIA", "First", "Juan Martinez", "2022-10-12", "2022-12-10",
+                "ACTIVE"));
+    }
+
 }

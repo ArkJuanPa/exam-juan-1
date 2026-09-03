@@ -7,12 +7,18 @@
       <!--Repositories-->
 
     <bean id="expeditionRepository"
-          class="edu.co.icesi.repository.ExpeditionRepository"
+          class="com.example.repository.ExpeditionRepository"
           init-method="initialize"/>
     </bean>
 
     <bean id="sightingRepository"
-          class="edu.co.icesi.repository.SightingRepository"
+          class="com.example.repository.SightingRepository"
           init-method="initialize"/>
-    </bean>
+ 
+    <!--Services-->
+
+    <bean id="expeditionService"
+          class="com.example.service.ExpeditionService">
+       
+
 </beans>
