@@ -57,8 +57,6 @@ public class SightingRepository {
     }
 
     public void initialize() {
-        save(new Sighting(1, "SESSION1", "Alice", 1200, 45, "North America", 1));
-        save(new Sighting(2, "SESSION2", "Bob", 850, 30, "Europe", 1));
-        save(new Sighting(3, "SESSION3", "Charlie", 2100, 90, "South America", 1));
+        save(new Sighting(1, "775-225", "Its good", "Tucan", " Ramphastidae ", "Tree", "Amazonas", 2, 2, 1));
     }
 }

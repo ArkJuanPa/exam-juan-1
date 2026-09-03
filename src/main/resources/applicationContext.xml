@@ -19,6 +19,14 @@
 
     <bean id="expeditionService"
           class="com.example.service.ExpeditionService">
-       
+        <constructor-arg ref="ExpeditionRepository"/>
+        <constructor-arg ref="SightingRepository"/>
+    </bean>
+
+    <bean id="sightingService"
+          class="com.example.service.GameSessionService">
+        <constructor-arg ref="ExpeditionRepository"/>
+        <constructor-arg ref="SightingRepository"/>
+    </bean>
 
 </beans>
